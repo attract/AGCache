@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 
 public class AGCache {
-    static let shared = AGCache()
+    public static let shared = AGCache()
     
-    func downloadImages(from urls: [String], size: CGSize, completion: @escaping (_ completion: [String:UIImage?]) -> Void) {
+    public func downloadImages(from urls: [String], size: CGSize, completion: @escaping (_ completion: [String:UIImage?]) -> Void) {
         DispatchQueue.global().async {
             var images: [String:UIImage?] = [:]
             
@@ -32,7 +32,7 @@ public class AGCache {
         }
     }
     
-    func downloadImage(from urlString: String, size: CGSize, completion: @escaping (_ completion: UIImage?) -> Void) {
+    public func downloadImage(from urlString: String, size: CGSize, completion: @escaping (_ completion: UIImage?) -> Void) {
         DispatchQueue.global().async {
             let cachedImage = AGCachedImage(path: urlString)
             
@@ -57,7 +57,7 @@ public class AGCache {
         }
     }
     
-    func downloadWithoutSavingToOffline(from urlString: String, size: CGSize, completion: @escaping (_ completion: UIImage?) -> Void) {
+    public func downloadWithoutSavingToOffline(from urlString: String, size: CGSize, completion: @escaping (_ completion: UIImage?) -> Void) {
         DispatchQueue.global().async {
             var resultImage: UIImage? = nil
             
@@ -73,7 +73,7 @@ public class AGCache {
         }
     }
     
-    func clearAll() {
+    public func clearAll() {
         AGCacheLogger.shared.removeAll()
     }
 }
