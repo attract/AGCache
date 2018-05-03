@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AGCache'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Small image cache system with resizing on-the-go. '
  
   s.description      = <<-DESC

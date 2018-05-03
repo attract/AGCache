@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class AGCache {
+public class AGCache {
     static let shared = AGCache()
     
     func downloadImages(from urls: [String], size: CGSize, completion: @escaping (_ completion: [String:UIImage?]) -> Void) {
