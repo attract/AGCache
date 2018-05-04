@@ -27,7 +27,7 @@ AGCache.shared.downloadImage(from: urlString, size: CGSize(width: 100, height: 1
 
 If you need batch images downloading, use another function:
 ```
-AGCache.shared.downloadImage(from: [urlStrings], size: CGSize(width: 100, height: 100)) { (cacheDictionary: [String:UIImage?]) in
+AGCache.shared.downloadImages(from: [urlStrings], size: CGSize(width: 100, height: 100)) { (cacheDictionary: [String:UIImage?]) in
             // needed images are saved in dictionary, call them by url
         }
 ```
