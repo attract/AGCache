@@ -1,5 +1,3 @@
-# AGCache readme.md
-
 # AGCache
 AGCache is simple and lightweight library that allows you to download images, resize them on-the-go and save downloaded items to cache. It works fully asynchronous so you’ll never face performance issue.
 
