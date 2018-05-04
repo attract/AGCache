@@ -1,5 +1,5 @@
 # AGCache
-AGCache is simple and lightweight library that allows you to download images, resize them on-the-go and save downloaded items to cache. It works fully asynchronous so you’ll never face performance issue.
+AGCache is a simple and lightweight library that allows downloading images, resizing them on-the-go and saving the downloaded items to the cache. It works fully asynchronously so you’ll never face performance issues.
 
 ## Installation
 You need `CocoaPods` to be preinstalled.
@@ -25,20 +25,20 @@ AGCache.shared.downloadImage(from: urlString, size: CGSize(width: 100, height: 1
         }
 ```
 
-If you need batch images downloading, use another function:
+If you need to download batch images, use another function:
 ```
 AGCache.shared.downloadImages(from: [urlStrings], size: CGSize(width: 100, height: 100)) { (cacheDictionary: [String:UIImage?]) in
             // needed images are saved in dictionary, call them by url
         }
 ```
 
-Another method allows you to download and resize image without storing it locally:
+Another method allows you to download and resize images without storing them locally:
 
 ```
 func downloadWithoutSavingToOffline(from urlString: String, size: CGSize, completion: @escaping (_ completion: UIImage?) -> Void)
 ```
 
-And, of course, if you need to clear cache, you can do it next way:
+And, of course, if you need to clear the cache, you can do it the following way:
 
 ```
 AGCache.shared.clearAll()
