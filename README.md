@@ -11,7 +11,7 @@ pod 'AGCache'
 ```
 
 ## Usage
-First of all, import AGCache module into your ViewController file (or everywhere you need it):
+First of all, import `AGCache` module into your ViewController file (or everywhere you need it):
 
 ```
 import AGCache
